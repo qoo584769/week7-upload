@@ -1,0 +1,299 @@
+{
+	"info": {
+		"_postman_id": "d37194a3-6757-4d13-89ef-6e9014c9d544",
+		"name": "week7-image",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "貼文系統",
+			"item": [
+				{
+					"name": "取得貼文",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOTM3OTAxMTY5NjU2MDJkYTAwMDg0YyIsImlhdCI6MTY1MzkwNjMwNSwiZXhwIjoxNjUzOTA5OTA1fQ.0uLR9ETxhbAQsvkFuEe67ZmCFBZvtCmiqlcTqgOv93E",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "https://week7-upload.herokuapp.com/posts",
+							"protocol": "https",
+							"host": [
+								"week7-upload",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "發布貼文",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOTM3OTAxMTY5NjU2MDJkYTAwMDg0YyIsImlhdCI6MTY1MzkwNjMwNSwiZXhwIjoxNjUzOTA5OTA1fQ.0uLR9ETxhbAQsvkFuEe67ZmCFBZvtCmiqlcTqgOv93E",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userid\":\"628e32f7f89403f201da15fa\",\r\n    \"content\":\"第1個使用者1100001\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://week7-upload.herokuapp.com/posts",
+							"protocol": "https",
+							"host": [
+								"week7-upload",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"posts"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "會員系統",
+			"item": [
+				{
+					"name": "會員註冊",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"user2\",\r\n    \"email\":\"user2@gmail.com\",\r\n    \"password\":\"123456aA\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://week7-upload.herokuapp.com/users/sign_up",
+							"protocol": "https",
+							"host": [
+								"week7-upload",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"sign_up"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "會員登入",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"user2@gmail.com\",\r\n    \"password\":\"123456aA\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://week7-upload.herokuapp.com/users/sign_in",
+							"protocol": "https",
+							"host": [
+								"week7-upload",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"sign_in"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "變更密碼",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOTRhMmVhMWE2OTAwZjI0ZjZjM2YxNCIsImlhdCI6MTY1MzkwODIyMywiZXhwIjoxNjUzOTExODIzfQ.NPOFtS0OIA1IifSzYL_LS1adl3bD1rdKKf8_DD7hhrg",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"6294a2ea1a6900f24f6c3f14\",\r\n    \"password\":\"123456aA\",\r\n    \"passwordConfirm\":\"123456aA\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://week7-upload.herokuapp.com/users/updatePassword",
+							"protocol": "https",
+							"host": [
+								"week7-upload",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"updatePassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "取得會員資料",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOTRhMmVhMWE2OTAwZjI0ZjZjM2YxNCIsImlhdCI6MTY1MzkwODIyMywiZXhwIjoxNjUzOTExODIzfQ.NPOFtS0OIA1IifSzYL_LS1adl3bD1rdKKf8_DD7hhrg",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"6294a2ea1a6900f24f6c3f14\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://week7-upload.herokuapp.com/users/profile",
+							"protocol": "https",
+							"host": [
+								"week7-upload",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "編輯會員資料",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOTRhMmVhMWE2OTAwZjI0ZjZjM2YxNCIsImlhdCI6MTY1MzkwODIyMywiZXhwIjoxNjUzOTExODIzfQ.NPOFtS0OIA1IifSzYL_LS1adl3bD1rdKKf8_DD7hhrg",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"6294a2ea1a6900f24f6c3f14\",\r\n    \"name\":\"測試使用者\",\r\n    \"gender\":\"\",\r\n    \"shot\":\"\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://week7-upload.herokuapp.com/users/profile",
+							"protocol": "https",
+							"host": [
+								"week7-upload",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "檔案上傳",
+			"item": [
+				{
+					"name": "圖片上傳",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOTRhMmVhMWE2OTAwZjI0ZjZjM2YxNCIsImlhdCI6MTY1MzkwODIyMywiZXhwIjoxNjUzOTExODIzfQ.NPOFtS0OIA1IifSzYL_LS1adl3bD1rdKKf8_DD7hhrg",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"type": "file",
+									"src": "/C:/Users/money/Desktop/mon.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://week7-upload.herokuapp.com/upload",
+							"protocol": "https",
+							"host": [
+								"week7-upload",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"upload"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
